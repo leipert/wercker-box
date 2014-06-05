@@ -1,18 +1,16 @@
 name: php55-mongodb-wercker-box
-version: 0.0.1
+version: 0.0.2
 inherits: wouter/ubuntu12.04-ansible@0.0.2
 type: main
 platform: ubuntu@12.04
 description: Leipert Standard Wercker Box
 keywords:
   - ansible
-  - nodejs
-  - grunt-cli
-  - bower
   - ruby
   - php55
   - composer
   - mongoDB
+  - sqlite
 packages:
   - ansible@1.4.5
 script: |
