@@ -1,17 +1,16 @@
-name: astonish-wercker-box
-version: 0.2.5
+name: php55-mongodb-wercker-box
+version: 0.0.1
 inherits: wouter/ubuntu12.04-ansible@0.0.2
 type: main
 platform: ubuntu@12.04
-description: Astonish Design standard Wercker Box
+description: Leipert Standard Wercker Box
 keywords:
   - ansible
   - nodejs
   - grunt-cli
   - bower
   - ruby
-  - bundler
-  - php54
+  - php55
   - composer
   - mongoDB
 packages:

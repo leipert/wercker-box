@@ -19,21 +19,6 @@
       - unzip
       - zip
 
-  - name: install node apt repo
-    apt_repository: repo=ppa:chris-lea/node.js state=present
-
-  - name: install node
-    apt: pkg=nodejs state=present update_cache=yes
-
-  - name: install grunt
-    npm: name=grunt-cli state=present global=yes
-
-  - name: install bower
-    npm: name=bower state=present global=yes
-
-  - name: install bundler
-    gem: name=bundler state=latest user_install=no
-
   - name: mongodb | get 10gen apt key
     command: apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
 
@@ -44,7 +29,7 @@
     apt: pkg=mongodb-10gen=2.4.10 state=installed update_cache=yes
 
   - name: install php54 apt repo
-    apt_repository: repo=ppa:ondrej/php5-oldstable state=present
+    apt_repository: repo=ppa:ondrej/php5 state=present
 
   - name: install php5.4
     apt: name={{ item }} state=present update_cache=yes
@@ -52,9 +37,7 @@
       - php5
       - php5-curl
       - php5-dev
-      - php5-mysql
       - php5-mcrypt
-      - php5-xdebug
       - php-apc
       - php-codesniffer
       - php-pear
