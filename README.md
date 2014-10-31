@@ -1,5 +1,5 @@
-# Astonish Design standard Wercker Box
-[![wercker status](https://app.wercker.com/status/da62deaa330891af10ea369d2ce48339/m/ "wercker status")](https://app.wercker.com/project/bykey/da62deaa330891af10ea369d2ce48339)
+# leipert standard wercker box
+[![wercker status](https://app.wercker.com/status/35c6c36fcce6fd4397221dff55990284/m "wercker status")](https://app.wercker.com/project/bykey/35c6c36fcce6fd4397221dff55990284)
 
 Provisioned with Ansible
 
