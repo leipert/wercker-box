@@ -33,17 +33,17 @@
     apt_repository: repo=ppa:ondrej/php5 state=present
 
   - name: install php5.5
-    apt: name={{ item }}=5.5.18 state=present update_cache=yes
+    apt: name={{ item }} state=present update_cache=yes
     with_items:
-      - php5
-      - php5-gd
-      - php5-sqlite
-      - php5-curl
-      - php5-dev
-      - php5-mcrypt
-      - php-apc
-      - php-codesniffer
-      - php-pear
+      - php5=5.5.18+dfsg-1+deb.sury.org~precise+1
+      - php5-gd=5.5.18+dfsg-1+deb.sury.org~precise+1
+      - php5-sqlite=5.5.18+dfsg-1+deb.sury.org~precise+1
+      - php5-curl=5.5.18+dfsg-1+deb.sury.org~precise+1
+      - php5-dev=5.5.18+dfsg-1+deb.sury.org~precise+1
+      - php5-mcrypt=5.5.18+dfsg-1+deb.sury.org~precise+1
+      - php-apc=4.0.6-1+deb.sury.org~precise+1
+      - php-codesniffer=1.5.0~rc2-1
+      - php-pear=5.5.18+dfsg-1+deb.sury.org~precise+1
 
   - name: check for phpunit
     shell: pear list -a | grep PHPUnit
