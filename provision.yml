@@ -28,7 +28,7 @@
     copy: src=files/apt-source-mongodb dest=/etc/apt/sources.list.d/10gen.list mode=755
 
   - name: mongodb | install
-    apt: pkg=mongodb-10gen=2.4.10 state=installed update_cache=yes
+    apt: pkg=mongodb-10gen=2.4.12 state=installed update_cache=yes
 
   - name: install php55 apt repo
     apt_repository: repo=ppa:ondrej/php5 state=present
@@ -43,7 +43,9 @@
       - php5-gd=5.5.18+dfsg-1+deb.sury.org~precise+1
       - php5-mcrypt=5.5.18+dfsg-1+deb.sury.org~precise+1
       - php5-sqlite=5.5.18+dfsg-1+deb.sury.org~precise+1
+      - php-apc=4.0.6-1+deb.sury.org~precise+1
       - php-codesniffer
+      - php-mongo=1.5.5-1+deb.sury.org~precise+1
       - php-pear=5.5.18+dfsg-1+deb.sury.org~precise+1
 
   - name: check for phpunit
@@ -68,17 +70,17 @@
   - name: update composer
     command: composer self-update
 
-  - name: check for mongo php extension
-    shell: pecl list | grep mongo
-    register: pecl_mongo_exists
-    ignore_errors: True
-
-  - name: install mongo php extension
-    raw: printf "\n" | sudo pecl install mongo
-    when: pecl_mongo_exists|failed
-
-  - name: configure mongo extension
-    copy: src=files/mongo.ini dest=/etc/php5/mods-available
-
-  - name: enable mongoDB php driver
-    command: php5enmod mongo
+#  - name: check for mongo php extension
+#    shell: pecl list | grep mongo
+#    register: pecl_mongo_exists
+#    ignore_errors: True
+#
+#  - name: install mongo php extension
+#    raw: printf "\n" | sudo pecl install mongo
+#    when: pecl_mongo_exists|failed
+#
+#  - name: configure mongo extension
+#    copy: src=files/mongo.ini dest=/etc/php5/mods-available
+#
+#  - name: enable mongoDB php driver
+#    command: php5enmod mongo
