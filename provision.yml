@@ -42,10 +42,10 @@
       - php5-dev=5.5.18+dfsg-1+deb.sury.org~precise+1
       - php5-gd=5.5.18+dfsg-1+deb.sury.org~precise+1
       - php5-mcrypt=5.5.18+dfsg-1+deb.sury.org~precise+1
+      - php5-mongo=1.5.5-1+deb.sury.org~precise+1
       - php5-sqlite=5.5.18+dfsg-1+deb.sury.org~precise+1
       - php-apc=4.0.6-1+deb.sury.org~precise+1
       - php-codesniffer
-      - php-mongo=1.5.5-1+deb.sury.org~precise+1
       - php-pear=5.5.18+dfsg-1+deb.sury.org~precise+1
 
   - name: check for phpunit
