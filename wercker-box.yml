@@ -1,5 +1,5 @@
 name: php55-mongodb-wercker-box
-version: 0.0.6
+version: 0.0.7
 inherits: wouter/ubuntu12.04-ansible@0.0.2
 type: main
 platform: ubuntu@12.04
@@ -15,6 +15,7 @@ packages:
   - ansible@1.4.5
   - php@5.5
   - composer
+  - strace
 script: |
   sudo apt-get update
   sudo apt-get install git build-essential python-jinja2 python-paramiko python-apt python-yaml -y
